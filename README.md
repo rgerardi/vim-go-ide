@@ -60,7 +60,6 @@ sudo apt-get install vim-nox
 
 To install Pathogen, use the following commands:
 ```
-mkdir -p ~/.vim/autoload/
 mkdir -p ~/.vim/bundle/
 git clone https://github.com/tpope/vim-pathogen.git ~/.vim/autoload/
 ```
@@ -105,7 +104,7 @@ colo molokai
 
 * For Vim8 - Autocompletion - Completor
 ```
-git clone https://github.com/maralla/completor.vim.git ~/.vim/bundle/
+git clone https://github.com/maralla/completor.vim.git ~/.vim/bundle/completor/
 ```
 
 
@@ -127,7 +126,7 @@ sudo apt-get install ctags
 
 Install TagBar:
 ```
-git clone https://github.com/majutsushi/tagbar.git ~/.vim/bundle/
+git clone https://github.com/majutsushi/tagbar.git ~/.vim/bundle/tagbar/
 ```
 
 Add the following line to `.vimrc`:
@@ -140,13 +139,13 @@ nnoremap <silent> <F9> :TagbarToggle<CR>
 
 Install neopsnippet:
 ```
-git clone https://github.com/Shougo/neosnippet.vim.git ~/.vim/bundle
+git clone https://github.com/Shougo/neosnippet.vim.git ~/.vim/bundle/neosnippet/
 ```
 
 
 Install default snippets:
 ```
-git clone https://github.com/Shougo/neosnippet-snippets.git ~/.vim/bundle
+git clone https://github.com/Shougo/neosnippet-snippets.git ~/.vim/bundle/neosnippet-snippets/
 ```
 
 
@@ -193,7 +192,7 @@ set laststatus=2
 
 Install Fugitive:
 ```
-git clone git://github.com/tpope/vim-fugitive.git ~/.vim/bundle
+git clone git://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive/
 ```
 
 Execute the following command to generate the help for Fugitive:
@@ -204,19 +203,19 @@ vim -u NONE -c "helptags vim-fugitive/doc" -c q
 
 * Nerd Commenter
 ```
-git clone https://github.com/scrooloose/nerdcommenter.git ~/.vim/bundle
+git clone https://github.com/scrooloose/nerdcommenter.git ~/.vim/bundle/nerdcommenter/
 ```
 
 
 * Vim-gitgutter
 ```
-git clone git://github.com/airblade/vim-gitgutter.git ~/.vim/bundle
+git clone git://github.com/airblade/vim-gitgutter.git ~/.vim/bundle/vim-gitgutter/
 ```
 
 
 * Ctrl-p
 ```
-git clone https://github.com/ctrlpvim/ctrlp.vim ~/.vim/bundle
+git clone https://github.com/ctrlpvim/ctrlp.vim ~/.vim/bundle/ctrlp/
 ```
 
 
@@ -240,7 +239,7 @@ nnoremap <F4> :NumbersOnOff<CR>
 
 * Surround:
 ```
-git clone git://github.com/tpope/vim-surround.git ~/.vim/bundle/
+git clone git://github.com/tpope/vim-surround.git ~/.vim/bundle/vim-surround/
 ```
 
 
