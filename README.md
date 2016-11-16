@@ -11,12 +11,14 @@ This material is provided for free. These plugins and configurations work for me
 The following plugins are used:
 * [Vim-Go] (https://github.com/fatih/vim-go) : Go (golang) support for vim
 * [Completor] (https://github.com/maralla/completor.vim.git): Keyboard completion support for Vim8
+* [Neocomplete] (https://github.com/Shougo/neocomplete.vim): Keyboard completion support for Vim
 * [TagBar] (https://github.com/majutsushi/tagbar.git): Outline tree for Vim
 * [Neosnippet] (https://github.com/Shougo/neosnippet.vim): Code snippets support for Vim
 * [vim-airline] (https://github.com/vim-airline/vim-airline): Status line plugin with support for a variety of features
 * [Fugitive] (https://github.com/tpope/vim-fugitive): Best Git wrapper plugin for Vim
 * [Vim-gitgutter] (https://github.com/airblade/vim-gitgutter): Enables git diff status on the gutter (side column)
 * [Ctrl-p] (https://github.com/ctrlpvim/ctrlp.vim): Fuzzy file finder for Vim
+* [Nerdcommenter] (https://github.com/scrooloose/nerdcommenter): Easy code commenter plugin
 * [Vim-autopairs] (https://github.com/jiangmiao/auto-pairs): Insert or delete brackets, parens, quotes in pair.
 * [Numbers] (https://github.com/myusuf3/numbers.vim): Quickly switch line numbers on/off or set relative numbers
 * [Surround] (https://github.com/tpope/vim-surround): Quickly add/delete/change surrounding brackets, quotes, tags, etc.
@@ -48,7 +50,7 @@ alias vi='/usr/local/bin/vim'
 ```
 
 ### Ubuntu Linux
-For Ubuntu, I recommend using vim-nox which comes with support to several additional features:
+For Ubuntu, I recommend using vim-nox which comes with support to several additional features, including Lua required by Neocomplete. Installing using the command below will install Vim 7.4 and the required pre-requisites:
 ```
 sudo apt-get update
 sudo apt-get install vim-nox
@@ -92,7 +94,7 @@ The `:GoInstallBinaries` command is used to download and install the Go utilitie
 
 I use the modified version of molokai [fatih/molokai](https://github.com/fatih/molokai) as color schema.
 
-To use it, simply download the file molokai.vim from the link above and copy it to the `~/.vim/colors/` directory.
+To use it, simply download the file `molokai.vim` from the link above and copy it to the `~/.vim/colors/` directory.
 
 If you are not using the provided `.vimrc` file, add the following line to your `.vimrc` to enable the color schema:
 ```vim
@@ -100,13 +102,39 @@ colo molokai
 ```
 
 
-## Installing Extra Plugins
+## Installing a Keyboard Completion plugin
 
-* For Vim8 - Autocompletion - Completor
+Automatic Keyboard completion (or context based suggestions) is one of the major features of an IDE. Vim provides autocompletion by pressing `<C-x><C-o>` keys but some plugins make the experience more real time and closer to the feeling of an IDE.
+
+For autocomplete there are two options:
+- For Vim 8, I recommend the [Completor] (https://github.com/maralla/completor.vim.git) plugin which works async and it's fast.
+- For Vim 7, [Neocomplete] (https://github.com/Shougo/neocomplete.vim) works well for me.
+
+### For Vim8 - Autocompletion - Completor
+
+Just clone the Completor plugin:
 ```
 git clone https://github.com/maralla/completor.vim.git ~/.vim/bundle/completor/
 ```
 
+Completor should just work for Go completion based on gocode. For other languages, please check their Github for further instructions.
+
+
+### For Vim 7 - Neocomplete
+Neocomplete required Vim compiled with the Lua option so if you may need to reinstal Vim to enable it. If you are running Ubuntu and installed Vim according to the procedure above you're good to go. For other versions of Vim, please check their Github for details.
+
+Clone the plugin:
+```
+git clone https://github.com/Shougo/neocomplete.vim.git ~/.vim/bundle/neocomplete/
+```
+
+Add the following line to the `.vimrc` file to enable Neocomplete automatically (or uncomment it in the provided `.vimrc`):
+```vim
+let g:neocomplete#enable_at_startup = 1
+```
+
+
+## Installing Extra Plugins
 
 * TagBar:
 
