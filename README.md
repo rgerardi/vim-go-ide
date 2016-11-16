@@ -63,7 +63,8 @@ sudo apt-get install vim-nox
 To install Pathogen, use the following commands:
 ```
 mkdir -p ~/.vim/bundle/
-git clone https://github.com/tpope/vim-pathogen.git ~/.vim/autoload/
+mkdir -p ~/.vim/autoload/
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 ```
 
 Use the provided `.vimrc` file or add the following lines at the top of your `.vimrc` file:
