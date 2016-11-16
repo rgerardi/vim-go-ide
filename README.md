@@ -75,7 +75,9 @@ filetype plugin indent on
 ## Installing Vim-Go
 
 Clone vim-go
-`git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go`
+```
+git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
+```
 
 Start Vim and run the commands:
 ```vim
@@ -86,7 +88,9 @@ The `:Helptags` command is used to create the help page for the plugin.
 
 The `:GoInstallBinaries` command is used to download and install the Go utilities used by Vim-Go such as `gocode`, `golint`, etc.
 
-*Optional*: Adding color schema (molokai)
+
+*Optional*: Adding color schema (molokai):
+
 I use the modified version of molokai [fatih/molokai](https://github.com/fatih/molokai) as color schema.
 
 To use it, simply download the file molokai.vim from the link above and copy it to the `~/.vim/colors/` directory.
@@ -98,11 +102,15 @@ colo molokai
 
 
 ## Installing Extra Plugins
+
 * For Vim8 - Autocompletion - Completor
-`git clone https://github.com/maralla/completor.vim.git ~/.vim/bundle/`
+```
+git clone https://github.com/maralla/completor.vim.git ~/.vim/bundle/
+```
 
 
 * TagBar:
+
 Tagbar leverages the `ctags` command to create the tags required to display the outline tree. It has to be installed before using TagBar.
 
 For Mac OSX, using Homebrew:
@@ -118,20 +126,28 @@ sudo apt-get install ctags
 ```
 
 Install TagBar:
-`git clone https://github.com/majutsushi/tagbar.git ~/.vim/bundle/`
+```
+git clone https://github.com/majutsushi/tagbar.git ~/.vim/bundle/
+```
 
-
-Add the following line to `.vimrc`
-`nnoremap <silent> <F9> :TagbarToggle<CR>`
+Add the following line to `.vimrc`:
+```
+nnoremap <silent> <F9> :TagbarToggle<CR>
+```
 
 
 * Neosnippet
-Install neopsnippet
-`git clone https://github.com/Shougo/neosnippet.vim.git ~/.vim/bundle`
+
+Install neopsnippet:
+```
+git clone https://github.com/Shougo/neosnippet.vim.git ~/.vim/bundle
+```
 
 
-Install default snippets
-`git clone https://github.com/Shougo/neosnippet-snippets.git ~/.vim/bundle`
+Install default snippets:
+```
+git clone https://github.com/Shougo/neosnippet-snippets.git ~/.vim/bundle
+```
 
 
 Add to `.vimrc`:
@@ -161,40 +177,59 @@ endif
 
 
 * vim-airline
-Install vim-airline
-`git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline`
 
+Install vim-airline:
+```
+git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
+```
 
 Add to `.vimrc`:
-`set laststatus=2`
+```
+set laststatus=2
+```
 
 
 * Fugitive
-`git clone git://github.com/tpope/vim-fugitive.git ~/.vim/bundle`
+
+Install Fugitive:
+```
+git clone git://github.com/tpope/vim-fugitive.git ~/.vim/bundle
+```
 
 Execute the following command to generate the help for Fugitive:
-`vim -u NONE -c "helptags vim-fugitive/doc" -c q`
+```
+vim -u NONE -c "helptags vim-fugitive/doc" -c q
+```
 
 
 * Nerd Commenter
-`git clone https://github.com/scrooloose/nerdcommenter.git ~/.vim/bundle`
+```
+git clone https://github.com/scrooloose/nerdcommenter.git ~/.vim/bundle
+```
 
 
 * Vim-gitgutter
-`git clone git://github.com/airblade/vim-gitgutter.git ~/.vim/bundle`
+```
+git clone git://github.com/airblade/vim-gitgutter.git ~/.vim/bundle
+```
 
 
 * Ctrl-p
-`git clone https://github.com/ctrlpvim/ctrlp.vim ~/.vim/bundle`
+```
+git clone https://github.com/ctrlpvim/ctrlp.vim ~/.vim/bundle
+```
 
 
 * Vim-autopairs
-`git clone git://github.com/jiangmiao/auto-pairs.git ~/.vim/bundle/auto-pairs`
+```
+git clone git://github.com/jiangmiao/auto-pairs.git ~/.vim/bundle/auto-pairs
+```
 
 
 * Numbers plugin
-`git clone https://github.com/myusuf3/numbers.vim.git ~/.vim/bundle/numbers`
-
+```
+git clone https://github.com/myusuf3/numbers.vim.git ~/.vim/bundle/numbers
+```
 
 Add to `.vimrc`:
 ```vim
@@ -204,8 +239,12 @@ nnoremap <F4> :NumbersOnOff<CR>
 
 
 * Surround:
-`git clone git://github.com/tpope/vim-surround.git ~/.vim/bundle/`
+```
+git clone git://github.com/tpope/vim-surround.git ~/.vim/bundle/
+```
 
 
 * NERDTree
-`git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree`
+```
+git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+```
