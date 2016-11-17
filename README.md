@@ -91,7 +91,7 @@ The `:Helptags` command is used to create the help page for the plugin.
 The `:GoInstallBinaries` command is used to download and install the Go utilities used by Vim-Go such as `gocode`, `golint`, etc.
 
 
-*Optional*: Adding color schema (molokai):
+### Optional: Adding color schema (molokai):
 
 I use the modified version of molokai [fatih/molokai](https://github.com/fatih/molokai) as color schema.
 
@@ -101,6 +101,25 @@ If you are not using the provided `.vimrc` file, add the following line to your 
 ```vim
 colo molokai
 ```
+
+### Optional: Installing Gometalinter
+
+The provided `.vimrc` file is configured to run `Gometalinter` automatically when saving the file. Gometalinter streamlines the process of executing static error checks for Go source code. With this configuration, it will execute the `go vet` and `golint` tools which are fast and should not add a delay when saving the file. You can always add more checks if you want. 
+
+If Gometalinter is not installed you will see an error message. To install it just execute the following command:
+```
+go get -u github.com/alecthomas/gometalinter
+```
+
+If not using the provide `.vimrc` file, just add the following lines to your configuration file to enable it on save:
+```vim
+" Enabling GoMetaLinter on save
+let g:go_metalinter_autosave = 1
+let g:go_metalinter_autosave_enabled = ['vet', 'golint']
+let g:go_metalinter_deadline = "5s"
+```
+
+You can also comment these lines out if you don't want to run Gometalinter on save.
 
 
 ## Installing a Keyboard Completion plugin
@@ -122,7 +141,7 @@ Completor should just work for Go completion based on gocode. For other language
 
 
 ### For Vim 7 - Neocomplete
-Neocomplete required Vim compiled with the Lua option so if you may need to reinstal Vim to enable it. If you are running Ubuntu and installed Vim according to the procedure above you're good to go. For other versions of Vim, please check their Github for details.
+Neocomplete requires Vim compiled with the Lua option so if you may need to reinstal Vim to enable it. If you are running Ubuntu and installed Vim according to the procedure above you're good to go. For other versions of Vim, please check their Github for details.
 
 Clone the plugin:
 ```
