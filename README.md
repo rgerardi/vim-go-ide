@@ -9,20 +9,21 @@ This material is provided for free. These plugins and configurations work for me
 ## Plugins
 
 The following plugins are used:
-* [Vim-Go] (https://github.com/fatih/vim-go) : Go (golang) support for vim
-* [Completor] (https://github.com/maralla/completor.vim.git): Keyboard completion support for Vim8
-* [Neocomplete] (https://github.com/Shougo/neocomplete.vim): Keyboard completion support for Vim
-* [TagBar] (https://github.com/majutsushi/tagbar.git): Outline tree for Vim
-* [Neosnippet] (https://github.com/Shougo/neosnippet.vim): Code snippets support for Vim
-* [vim-airline] (https://github.com/vim-airline/vim-airline): Status line plugin with support for a variety of features
-* [Fugitive] (https://github.com/tpope/vim-fugitive): Best Git wrapper plugin for Vim
-* [Vim-gitgutter] (https://github.com/airblade/vim-gitgutter): Enables git diff status on the gutter (side column)
-* [Ctrl-p] (https://github.com/ctrlpvim/ctrlp.vim): Fuzzy file finder for Vim
-* [Nerdcommenter] (https://github.com/scrooloose/nerdcommenter): Easy code commenter plugin
-* [Vim-autopairs] (https://github.com/jiangmiao/auto-pairs): Insert or delete brackets, parens, quotes in pair.
-* [Numbers] (https://github.com/myusuf3/numbers.vim): Quickly switch line numbers on/off or set relative numbers
-* [Surround] (https://github.com/tpope/vim-surround): Quickly add/delete/change surrounding brackets, quotes, tags, etc.
-* [NERDTree] (https://github.com/scrooloose/nerdtree): Filesystem tree for Vim
+
+* [Vim-Go](https://github.com/fatih/vim-go) : Go (golang) support for vim
+* [Completor](https://github.com/maralla/completor.vim.git): Keyboard completion support for Vim8
+* [Neocomplete](https://github.com/Shougo/neocomplete.vim): Keyboard completion support for Vim
+* [TagBar](https://github.com/majutsushi/tagbar.git): Outline tree for Vim
+* [Neosnippet](https://github.com/Shougo/neosnippet.vim): Code snippets support for Vim
+* [vim-airline](https://github.com/vim-airline/vim-airline): Status line plugin with support for a variety of features
+* [Fugitive](https://github.com/tpope/vim-fugitive): Best Git wrapper plugin for Vim
+* [Vim-gitgutter](https://github.com/airblade/vim-gitgutter): Enables git diff status on the gutter (side column)
+* [Ctrl-p](https://github.com/ctrlpvim/ctrlp.vim): Fuzzy file finder for Vim
+* [Nerdcommenter](https://github.com/scrooloose/nerdcommenter): Easy code commenter plugin
+* [Vim-autopairs](https://github.com/jiangmiao/auto-pairs): Insert or delete brackets, parens, quotes in pair.
+* [Numbers](https://github.com/myusuf3/numbers.vim): Quickly switch line numbers on/off or set relative numbers
+* [Surround](https://github.com/tpope/vim-surround): Quickly add/delete/change surrounding brackets, quotes, tags, etc.
+* [NERDTree](https://github.com/scrooloose/nerdtree): Filesystem tree for Vim
 
 ## How to use
 
@@ -58,7 +59,7 @@ sudo apt-get install vim-nox
 
 ## Installing Pathogen
 
-[Pathogen] (https://github.com/tpope/vim-pathogen) is a very simple and easy to use plugin manager for Vim. Pathogen allows plugin installation directly under the `.vim` directory by simply copying the plugin to the `bundle` directory. 
+[Pathogen](https://github.com/tpope/vim-pathogen) is a very simple and easy to use plugin manager for Vim. Pathogen allows plugin installation directly under the `.vim` directory by simply copying the plugin to the `bundle` directory. 
 
 To install Pathogen, use the following commands:
 ```
@@ -127,8 +128,8 @@ You can also comment these lines out if you don't want to run Gometalinter on sa
 Automatic Keyboard completion (or context based suggestions) is one of the major features of an IDE. Vim provides autocompletion by pressing `<C-x><C-o>` keys but some plugins make the experience more real time and closer to the feeling of an IDE.
 
 For autocomplete there are two options:
-- For Vim 8, I recommend the [Completor] (https://github.com/maralla/completor.vim.git) plugin which works async and it's fast.
-- For Vim 7, [Neocomplete] (https://github.com/Shougo/neocomplete.vim) works well for me.
+- For Vim 8, I recommend the [Completor](https://github.com/maralla/completor.vim.git) plugin which works async and it's fast.
+- For Vim 7, [Neocomplete](https://github.com/Shougo/neocomplete.vim) works well for me.
 
 ### For Vim8 - Autocompletion - Completor
 
