@@ -29,13 +29,13 @@ The following plugins are used:
 
 This repository assumes you're using either Linux or Mac OSX with Go and Git already installed.
 
-In order to use this repository, simply follow the instructions to install the plugins and use the provided `.vimrc` file to start. You can clone this repository and link or copy the provided `.vimrc` file to your home directory.
+In order to use this repository, follow the instructions to install the plugins and use the provided `.vimrc` file to start. You can clone this repository and link or copy the provided `.vimrc` file to your home directory.
 
 TODO: Windows instructions
 
 ## Installing Vim
 ### Mac OSX
-The Vim provided by Apple is the old 7.4 version and does not support features like Lua which would be required by the completion plugin. For this guide we will use Vim 8 installed using Homebrew. If you don't want to use Homebrew, you can always download and compile Vim from source.
+The Vim provided by Apple is the old 7.4 version and does not support features like Lua which would be required by the completion plugin. For this guide we will use Vim 8 which you can install using Homebrew. If you don't want to use Homebrew, you can always download and compile Vim from source.
 
 Assuming Homebrew is installed, run the following command to install Vim 8:
 ```
@@ -43,7 +43,7 @@ brew update
 brew install vim
 ```
 
-*Note*:This command will install Vim8 but it will not overwrite the default Vim. I don't like to overwrite the default one so I just add an alias to the new installed version of Vim in the `.bash_profile` file, like this:
+*Note*:This command will install Vim8 but it will not overwrite the default Vim. I don't like to overwrite the default one so I add an alias to the new installed version of Vim in the `.bash_profile` file, like this:
 ```
 ### Replacing default vim/vi
 alias vim='/usr/local/bin/vim'
@@ -59,7 +59,7 @@ sudo apt-get install vim-nox
 
 ## Installing Pathogen
 
-[Pathogen](https://github.com/tpope/vim-pathogen) is a very simple and easy to use plugin manager for Vim. Pathogen allows plugin installation directly under the `.vim` directory by simply copying the plugin to the `bundle` directory. 
+[Pathogen](https://github.com/tpope/vim-pathogen) is a simple and easy to use plugin manager for Vim. Pathogen allows plugin installation directly under the `.vim` directory by copying the plugin to the `bundle` directory. 
 
 To install Pathogen, use the following commands:
 ```
@@ -87,16 +87,16 @@ Start Vim and run the commands:
 :Helptags
 :GoInstallBinaries
 ```
-The `:Helptags` command is used to create the help page for the plugin.
+The `:Helptags` command creates the help page for the plugin.
 
-The `:GoInstallBinaries` command is used to download and install the Go utilities used by Vim-Go such as `gocode`, `golint`, etc.
+The `:GoInstallBinaries` command downloads and installs the Go utilities used by Vim-Go such as `gocode`, `golint`, etc.
 
 
 ### Optional: Adding color schema (molokai):
 
 I use the modified version of molokai [fatih/molokai](https://github.com/fatih/molokai) as color schema.
 
-To use it, simply download the file `molokai.vim` from the link above and copy it to the `~/.vim/colors/` directory.
+To use it, download the file `molokai.vim` from the link above and copy it to the `~/.vim/colors/` directory.
 
 If you are not using the provided `.vimrc` file, add the following line to your `.vimrc` to enable the color schema:
 ```vim
@@ -107,12 +107,16 @@ colo molokai
 
 The provided `.vimrc` file is configured to run `Gometalinter` automatically when saving the file. Gometalinter streamlines the process of executing static error checks for Go source code. With this configuration, it will execute the `go vet` and `golint` tools which are fast and should not add a delay when saving the file. You can always add more checks if you want. 
 
-If Gometalinter is not installed you will see an error message. To install it just execute the following command:
+If Gometalinter is not installed you will see an error message. To install it execute the following command:
 ```
 go get -u github.com/alecthomas/gometalinter
 ```
+Now, install all known linters like this:
+```
+gometalinter --install
+```
 
-If not using the provide `.vimrc` file, just add the following lines to your configuration file to enable it on save:
+If not using the provided `.vimrc` file, add the following lines to your configuration file to enable it on save:
 ```vim
 " Enabling GoMetaLinter on save
 let g:go_metalinter_autosave = 1
@@ -133,16 +137,16 @@ For autocomplete there are two options:
 
 ### For Vim8 - Autocompletion - Completor
 
-Just clone the Completor plugin:
+Clone the Completor plugin:
 ```
 git clone https://github.com/maralla/completor.vim.git ~/.vim/bundle/completor/
 ```
 
-Completor should just work for Go completion based on gocode. For other languages, please check their Github for further instructions.
+Completor should just work for Go completion based on `gocode`. For other languages, please check their Github for further instructions.
 
 
 ### For Vim 7 - Neocomplete
-Neocomplete requires Vim compiled with the Lua option so if you may need to reinstal Vim to enable it. If you are running Ubuntu and installed Vim according to the procedure above you're good to go. For other versions of Vim, please check their Github for details.
+Neocomplete requires Vim compiled with the Lua option so you may need to reinstal Vim to enable it. If you are running Ubuntu and installed Vim according to the procedure above you're good to go. For other versions of Vim, please check their Github for details.
 
 Clone the plugin:
 ```
